@@ -10,7 +10,7 @@ Then, you can optionally calculate the checksum of the file by typing in
 The SHA256 (Secure Hash Algorithm) checksum should be `a4feae2e4c71691528cc87b00e6915c00ea26b405d702ab2c3b58303cea5fa0a`
 This ensures that the script hasn't been tampered with and it isn't corrupt. 
 
-The only prerequsite for this script is that you are using a relatively recent version of macOS (or OS X).
+The only requsite for this script is that you are using a relatively recent version of macOS (or OS X).
 
 # Usage
 1. Answer the prompts by typing the amount of passwords needed and the amount of random characters you want after each word. 
