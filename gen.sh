@@ -1,6 +1,6 @@
 #!/bin/bash
 echo Welcome to the random password assistor created by InnovativeInventor
-echo This is version 2
+echo This is version 3
 echo "This now uses your Mac's word list at /usr/share/dict/words. It has 235886 entries."
 echo
 echo Please type in the amount of random words that you need
