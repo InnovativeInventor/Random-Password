@@ -34,7 +34,7 @@ until [ $COUNTER -lt 1 ]; do
     )
     totalelse=$(( firstnumber*100000+finishnumberelse ))
     echo $totalelse
-    awk -v "NR=totalif" /usr/share/dict/words > randomwords.txt
+    awk -v "NR=totalelse" /usr/share/dict/words > randomwords.txt
   fi
   let COUNTER-=1
   
