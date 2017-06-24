@@ -27,14 +27,14 @@ until [ $COUNTER -lt 1 ]; do
     )
     totalif=$(( firstnumber*100000+firstnumberif*10000+finishnumberif ))
     echo $totalif
-    awk -v "NR=totalif" /usr/share/dict/words > randomwords.txt
+    sed -n "$totalif p" /usr/share/dict/words >> randomwords.txt
   else
     finishnumberelse=$(
     LC_ALL=C tr -dc '0-9' </dev/random | head -c 5
     )
     totalelse=$(( firstnumber*100000+finishnumberelse ))
     echo $totalelse
-    awk -v "NR=totalelse" /usr/share/dict/words > randomwords.txt
+    sed -n "$totalelse p" /usr/share/dict/words >> randomwords.txt
   fi
   let COUNTER-=1
   
