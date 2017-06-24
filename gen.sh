@@ -10,25 +10,31 @@ foo=$number
 echo Generating random stuff
 echo Please do some other things on this computer to generate entropy
 
-firstnumber=$(
-LC_ALL=C tr -dc '0-2' </dev/random | head -c 1
-)
+COUNTER=foo
+until [ $COUNTER -lt 1 ]; do
 
-if ((firstnumber == 2)); then
-  firstnumberif=$(
-  LC_ALL=C tr -dc '0-3' </dev/random | head -c 1
+  firstnumber=$(
+  LC_ALL=C tr -dc '0-2' </dev/random | head -c 1
   )
-  finishnumberif=$(
-  LC_ALL=C tr -dc '0-9' </dev/random | head -c 4
-  )
-  totalif=$(( firstnumber*100000+firstnumberif*10000+finishnumberif ))
-  echo $totalif "number is two"
-  awk -v "NR=totalif" /usr/share/dict/words > randomwords.txt
-else
-  finishnumberelse=$(
-  LC_ALL=C tr -dc '0-9' </dev/random | head -c 5
-  )
-  totalelse=$(( firstnumber*100000+finishnumberelse ))
-  echo $totalelse "number is not two"
-  awk -v "NR=totalif" /usr/share/dict/words > randomwords.txt
-fi
+
+  if ((firstnumber == 2)); then
+    firstnumberif=$(
+    LC_ALL=C tr -dc '0-3' </dev/random | head -c 1
+    )
+    finishnumberif=$(
+    LC_ALL=C tr -dc '0-9' </dev/random | head -c 4
+    )
+    totalif=$(( firstnumber*100000+firstnumberif*10000+finishnumberif ))
+    echo $totalif "number is two"
+    awk -v "NR=totalif" /usr/share/dict/words > randomwords.txt
+  else
+    finishnumberelse=$(
+    LC_ALL=C tr -dc '0-9' </dev/random | head -c 5
+    )
+    totalelse=$(( firstnumber*100000+finishnumberelse ))
+    echo $totalelse "number is not two"
+    awk -v "NR=totalif" /usr/share/dict/words > randomwords.txt
+  fi
+  let COUNTER-=1
+  
+done
