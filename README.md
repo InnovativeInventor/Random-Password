@@ -7,7 +7,7 @@ First download gen.sh and run it by typing into terminal:
 
 Then, you can optionally calculate the checksum of the file by typing in
 `openssl dgst -SHA256 gen.sh`
-The SHA256 (Secure Hash Algorithm) checksum should be `a4feae2e4c71691528cc87b00e6915c00ea26b405d702ab2c3b58303cea5fa0a`
+The SHA256 (Secure Hash Algorithm) checksum should be `783161252902474bab9021dc369877d36e1130f04bf8d46d5a724ce5167d8a56`
 This ensures that the script hasn't been tampered with and it isn't corrupt. 
 
 The only requsite for this script is that you are using a relatively recent version of macOS (or OS X).
