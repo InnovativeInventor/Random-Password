@@ -10,7 +10,7 @@ foo=$number
 echo Generating random stuff
 echo Please do some other things on this computer to generate entropy
 
-COUNTER=foo
+COUNTER=$foo
 until [ $COUNTER -lt 1 ]; do
 
   firstnumber=$(
