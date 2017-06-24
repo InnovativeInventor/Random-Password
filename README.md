@@ -3,3 +3,6 @@ A simple random password generator for Mac designed to be secure and easy to use
 
 # Install
 Simply download gen.sh and run it by typing into terminal: `sh gen.sh`
+
+# Usage
+Your output will come out in a file named randomwords.txt in the directory that you installed it in. 
