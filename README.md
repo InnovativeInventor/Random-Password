@@ -7,10 +7,10 @@ First download gen.sh and run it by typing into terminal:
 
 Then, you can optionally calculate the checksum of the file by typing in
 `openssl dgst -SHA256 gen.sh`
-The SHA256 (Secure Hash Algorithm) checksum should be `a4feae2e4c71691528cc87b00e6915c00ea26b405d702ab2c3b58303cea5fa0a`
+The SHA256 (Secure Hash Algorithm) checksum should be `783161252902474bab9021dc369877d36e1130f04bf8d46d5a724ce5167d8a56`
 This ensures that the script hasn't been tampered with and it isn't corrupt. 
 
-The only prerequsite for this script is that you are using a relatively recent version of macOS (or OS X).
+The only requsite for this script is that you are using a relatively recent version of macOS (or OS X).
 
 # Usage
 1. Answer the prompts by typing the amount of passwords needed and the amount of random characters you want after each word. 
@@ -23,6 +23,9 @@ You can view the progress of the generator by looking at the progress meter.
 
 # Contributions
 Feel free to contribute and add more features!
+<<<<<<< HEAD
 
 # 12dict4schools
 Safelist.txt was created using Alan Beale's 12 dict project and is intended for school use and other applications that require a dictionary with safe words. You can contribute to 12dict4schools at https://github.com/InnovativeInventor/12dict4schools
+=======
+>>>>>>> origin/master
