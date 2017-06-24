@@ -9,6 +9,7 @@ echo
 foo=$number
 echo Generating random stuff
 echo Please do some other things on this computer to generate entropy
+echo Your output will come out in a file named randomwords.txt in this directory
 
 COUNTER=$foo
 until [ $COUNTER -lt 1 ]; do
