@@ -26,14 +26,14 @@ until [ $COUNTER -lt 1 ]; do
     LC_ALL=C tr -dc '0-9' </dev/random | head -c 4
     )
     totalif=$(( firstnumber*100000+firstnumberif*10000+finishnumberif ))
-    echo $totalif "number is two"
+    echo $totalif
     awk -v "NR=totalif" /usr/share/dict/words > randomwords.txt
   else
     finishnumberelse=$(
     LC_ALL=C tr -dc '0-9' </dev/random | head -c 5
     )
     totalelse=$(( firstnumber*100000+finishnumberelse ))
-    echo $totalelse "number is not two"
+    echo $totalelse
     awk -v "NR=totalif" /usr/share/dict/words > randomwords.txt
   fi
   let COUNTER-=1
