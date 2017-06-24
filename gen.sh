@@ -31,9 +31,13 @@ until [ $COUNTER -lt 1 ]; do
     )
     finalnumberif=$(echo $finishnumberif | sed 's/^0*//')
     totalif=$(( firstnumber*100000+firstnumberif*10000+finalnumberif ))
+    if ((totalif > 235886)); then
+      echo "Uncommon error:number generated is too large, self-correcting. Please count the amount of passwords to ensure proper self-correction"
+    else
     word=`sed -n "$totalif p" /usr/share/dict/words`
     randomsymbols=$(LC_ALL=C tr -dc '0-9!@#$%^&*()_+-=<>/?.' </dev/random | head -c $char)
     echo $word$randomsymbols >> randomwords.txt
+    fi
   else
     finishnumberelse=$(
     LC_ALL=C tr -dc '0-9' </dev/random | head -c 5
@@ -49,5 +53,6 @@ until [ $COUNTER -lt 1 ]; do
   echo Progress: "$progress/$number\r\c"
 done
 echo
-echo "Done! Check randomwords.txt."
+echo "Done! Check randomwords.txt. It should be opening. . ."
 echo
+open -a "TextEdit" randomwords.txt
