@@ -10,6 +10,9 @@ foo=$number
 echo Generating random stuff
 echo Please do some other things on this computer to generate entropy
 echo Your output will come out in a file named randomwords.txt in this directory
+echo
+echo Type in the number of random characters that you want after your word
+read char
 
 COUNTER=$foo
 until [ $COUNTER -lt 1 ]; do
@@ -25,16 +28,22 @@ until [ $COUNTER -lt 1 ]; do
     finishnumberif=$(
     LC_ALL=C tr -dc '0-9' </dev/random | head -c 4
     )
-    totalif=$(( firstnumber*100000+firstnumberif*10000+finishnumberif ))
+    finalnumberif=$(echo $finishnumberif | sed 's/^0*//')
+    totalif=$(( firstnumber*100000+firstnumberif*10000+finalnumberif ))
     echo $totalif
-    sed -n "$totalif p" /usr/share/dict/words >> randomwords.txt
+    word=`sed -n "$totalif p" /usr/share/dict/words`
+    randomsymbols=$(LC_ALL=C tr -dc '0-9!@#$%^&*()_+-=<>/?.' </dev/random | head -c $char)
+    echo $word$randomsymbols >> randomwords.txt
   else
     finishnumberelse=$(
     LC_ALL=C tr -dc '0-9' </dev/random | head -c 5
     )
-    totalelse=$(( firstnumber*100000+finishnumberelse ))
+    finalnumberelse=$(echo $finishnumberelse | sed 's/^0*//')
+    totalelse=$(( firstnumber*100000+finalnumberelse ))
     echo $totalelse
-    sed -n "$totalelse p" /usr/share/dict/words >> randomwords.txt
+    word=`sed -n "$totalelse p" /usr/share/dict/words`
+    randomsymbols=$(LC_ALL=C tr -dc '0-9!@#$%^&*()_+-=<>/?.' </dev/random | head -c $char)
+    echo $word$randomsymbols >> randomwords.txt
   fi
   let COUNTER-=1
   
