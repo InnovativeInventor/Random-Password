@@ -1,6 +1,6 @@
 #!/bin/bash
 echo Installing
-mkdir /usr/local/opt/rp
+sudo mkdir /usr/local/opt/rp
 echo Downloading
 git clone git://github.com/InnovativeInventor/Random-Password
 cp ~/Random-Password/bin /usr/local/opt/rp/
