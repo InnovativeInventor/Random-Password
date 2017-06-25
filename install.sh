@@ -9,6 +9,7 @@ sudo mv /usr/local/opt/rp/bin/rp.sh /usr/local/opt/rp/bin/rp
 sudo chmod +x /usr/local/opt/rp/bin/rpsafe
 sudo chmod +x /usr/local/opt/rp/bin/rp
 echo ' ' >> ~/.bash_profile
+source ./bash_profile
 echo '# Setting PATH for random password generator' >> ~/.bash_profile
 echo 'export PATH="/usr/local/opt/rp/bin:$PATH"' >> ~/.bash_profile
 echo 'Done! Type rp to start.'

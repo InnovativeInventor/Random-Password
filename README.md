@@ -2,17 +2,22 @@
 A simple, secure random password generator for Mac designed to be secure and easy to use. This generator picks words from /usr/share/dict/words using data from /dev/random, a word dictionary that is comes preinstalled with macOS.
 
 # Install
-First download gen.sh and run it by typing into terminal: 
-`sh gen.sh`
+First download install.sh and run it by typing into terminal: 
+`sh install.sh`
 
 Then, you can optionally calculate the checksum of the file by typing in
-`openssl dgst -SHA256 gen.sh`
-The SHA256 (Secure Hash Algorithm) checksum should be `783161252902474bab9021dc369877d36e1130f04bf8d46d5a724ce5167d8a56`
+`openssl dgst -SHA256 install.sh`
+The SHA256 (Secure Hash Algorithm) checksum should be `6b8a6b741d93d47b7fc21a3fce989ed60ed0eee6ee1d378e41dada087dbe88df`
 This ensures that the script hasn't been tampered with and it isn't corrupt. 
 
 The only requsite for this script is that you are using a relatively recent version of macOS (or OS X).
 
 # Usage
+
+To start, install then type `rp` to start the random password generator or `rpsafe` for the random password generator with a list of safe, child-friendly words.
+
+Note: `rpsafe` is still being worked on and should not be used. Please use `rp` for now.
+
 1. Answer the prompts by typing the amount of passwords needed and the amount of random characters you want after each word. 
 2. Then, move your mouse around and do other actions on your computer to ensure that enough entropy is generated to prevent /dev/random from blocking. 
 3. Your output will come out in a file named randomwords.txt in the directory that you installed it in. to view it, type in:
