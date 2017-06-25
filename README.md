@@ -23,9 +23,6 @@ You can view the progress of the generator by looking at the progress meter.
 
 # Contributions
 Feel free to contribute and add more features!
-<<<<<<< HEAD
 
 # 12dict4schools
 Safelist.txt was created using Alan Beale's 12 dict project and is intended for school use and other applications that require a dictionary with safe words. You can contribute to 12dict4schools at https://github.com/InnovativeInventor/12dict4schools
-=======
->>>>>>> origin/master
