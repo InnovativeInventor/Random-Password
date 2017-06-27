@@ -41,7 +41,7 @@ until [ $COUNTER -lt 1 ]; do
       printf "$word+$randomsymbols\n"
       echo $word
       echo $randomsymbols
-      echo $word$randomsymbols >> randomwords.txt
+      echo $word$randomsymbols >> randompassword.txt
       let COUNTER-=1
     fi
   else
@@ -57,13 +57,13 @@ until [ $COUNTER -lt 1 ]; do
     printf "$word+$randomsymbols \n"
     echo $word
     echo $randomsymbols
-    echo $word$randomsymbols >> randomwords.txt
+    echo $word$randomsymbols >> randompassword.txt
     let COUNTER-=1
   fi
   progress=$((number-COUNTER))
   #echo Progress: "$progress/$number\r\c"
 done
 echo
-echo "Done! Check randomwords.txt. It should be opening. . ."
+echo "Done! Check randompassword.txt. It should be opening. . ."
 echo
-open -a "TextEdit" randomwords.txt
+open -a "TextEdit" randompassword.txt

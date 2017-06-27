@@ -7,22 +7,26 @@ First download install.sh and run it by typing into terminal:
 
 Then, you can optionally calculate the checksum of the file by typing in
 `openssl dgst -SHA256 install.sh`
-The SHA256 (Secure Hash Algorithm) checksum should be `6b8a6b741d93d47b7fc21a3fce989ed60ed0eee6ee1d378e41dada087dbe88df`
+The SHA256 (Secure Hash Algorithm) checksum should be `e492d9919c1ea069663f43df49902af405d6384092c2855031122203aeee7f1d`
 This ensures that the script hasn't been tampered with and it isn't corrupt. 
 
 The only requsite for this script is that you are using a relatively recent version of macOS (or OS X).
 
 # Usage
 
-To start, install then type `rp` to start the random password generator or `rpsafe` for the random password generator with a list of safe, child-friendly words.
+To start, install then type one of the following options:
 
-Note: `rpsafe` is still being worked on and should not be used. Please use `rp` for now.
+ - `rp` to generate a random word followed by however many random characters that you want
+ - `rpc` to generate a random string of characters
+ - `rpn` to generate a random string of numbers
+ - `rpd` to delete your randompassword.txt file
+ - `rpsafe` to generate a random, school appropriate word followed by however many characters that you want.
+
+ Note: `rpsafe` is currently not working, please use it only when this message is removed.
 
 1. Answer the prompts by typing the amount of passwords needed and the amount of random characters you want after each word. 
 2. Then, move your mouse around and do other actions on your computer to ensure that enough entropy is generated to prevent /dev/random from blocking. 
-3. Your output will come out in a file named randomwords.txt in the directory that you installed it in. to view it, type in:
-`sudo nano randomwords.txt`
-or navigate to the directory in Finder and your text viewer/editor of choice.
+3. Your output will come out in a file named randompassword.txt in the directory that you installed it in it should automatically open 
 
 You can view the progress of the generator by looking at the progress meter.
 

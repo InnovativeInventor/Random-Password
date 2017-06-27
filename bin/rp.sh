@@ -36,7 +36,7 @@ until [ $COUNTER -lt 1 ]; do
     else
     word=`sed -n "$totalif p" /usr/share/dict/words`
     randomsymbols=$(LC_ALL=C tr -dc '0-9!@#$%^&*()_+-=<>/?.' </dev/random | head -c $char)
-    echo $word$randomsymbols >> randomwords.txt
+    echo $word$randomsymbols >> randompassword.txt
     fi
   else
     finishnumberelse=$(
@@ -46,13 +46,13 @@ until [ $COUNTER -lt 1 ]; do
     totalelse=$(( firstnumber*100000+finalnumberelse ))
     word=`sed -n "$totalelse p" /usr/share/dict/words`
     randomsymbols=$(LC_ALL=C tr -dc '0-9!@#$%^&*()_+-=<>/?.' </dev/random | head -c $char)
-    echo $word$randomsymbols >> randomwords.txt
+    echo $word$randomsymbols >> randompassword.txt
   fi
   let COUNTER-=1
   progress=$((number-COUNTER))
   echo Progress: "$progress/$number\r\c"
 done
 echo
-echo "Done! Check randomwords.txt. It should be opening. . ."
+echo "Done! Check randompassword.txt. It should be opening. . ."
 echo
-open -a "TextEdit" randomwords.txt
+open -a "TextEdit" randompassword.txt
