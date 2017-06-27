@@ -14,7 +14,10 @@ The only requsite for this script is that you are using a relatively recent vers
 
 # Usage
 
-To start, install then type one of the following options:
+To start, install by typing the following command:
+`cd && curl -L https://git.io/vQnNE -o ~/install.sh && sh install.sh`
+
+Then, choose one of the following options:
 
  - `rp` to generate a random word followed by however many random characters that you want
  - `rpc` to generate a random string of characters
