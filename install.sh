@@ -2,7 +2,7 @@
 echo Installing
 sudo mkdir /usr/local/opt/rp
 echo Downloading
-git clone git://github.com/InnovativeInventor/Random-Password
+git clone https://github.com/InnovativeInventor/Random-Password
 sudo cp -r ~/Random-Password/bin /usr/local/opt/rp/
 sudo mv /usr/local/opt/rp/bin/rpsafe.sh /usr/local/opt/rp/bin/rpsafe
 sudo mv /usr/local/opt/rp/bin/rp.sh /usr/local/opt/rp/bin/rp
