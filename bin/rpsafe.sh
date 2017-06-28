@@ -37,7 +37,7 @@ until [ $COUNTER -lt 1 ]; do
       word=`sed -n "$totalif p" safedict.txt`
       randomsymbols=$(LC_ALL=C tr -dc '0-9!@#$%^&*()_+-=<>/?.' </dev/random | head -c $char)
       word=$(echo $word | sed 's/^0*//')
-      randomsymbols=$(echo $randomsymbols | sed 's/^0*//')
+      randomsymbols=$(echo $randomsymbols | tr -d '\040\011\012\015')
       printf "$word+$randomsymbols\n"
       echo $word
       echo $randomsymbols
@@ -53,7 +53,7 @@ until [ $COUNTER -lt 1 ]; do
     word=`sed -n "$totalelse p" safedict.txt`
     randomsymbols=$(LC_ALL=C tr -dc '0-9!@#$%^&*()_+-=<>/?.' </dev/random | head -c $char)
     word=$(echo $word | sed 's/^0*//')
-    randomsymbols=$(echo $randomsymbols | sed 's/^0*//')
+    randomsymbols=$(echo $randomsymbols | tr -d '\040\011\012\015')
     printf "$word+$randomsymbols \n"
     echo $word
     echo $randomsymbols
