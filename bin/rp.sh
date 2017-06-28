@@ -50,7 +50,7 @@ until [ $COUNTER -lt 1 ]; do
   fi
   let COUNTER-=1
   progress=$((number-COUNTER))
-  echo Progress: "$progress/$number\r\c"
+  echo Progress: "$progress/$number"
 done
 echo
 echo "Done! Check randompassword.txt. It should be opening. . ."
