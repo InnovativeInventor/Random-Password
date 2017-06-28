@@ -18,8 +18,8 @@ until [ $COUNTER -lt 1 ]; do
   echo $number
   echo $number >> randompassword.txt
   let COUNTER-=1
-  # progress=$((number-COUNTER))
-  # echo Progress: "$progress/$COUNTER\r\c"
+  progress=$((number-COUNTER))
+  echo Progress: "$progress/$COUNTER"
 done
 echo "Done! Check randompassword.txt. It should be opening. . ."
 echo
