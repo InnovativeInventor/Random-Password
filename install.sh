@@ -9,7 +9,7 @@ sudo mv /usr/local/opt/rp/bin/rp.sh /usr/local/opt/rp/bin/rp
 sudo mv /usr/local/opt/rp/bin/rpn.sh /usr/local/opt/rp/bin/rpn
 sudo mv /usr/local/opt/rp/bin/rpc.sh /usr/local/opt/rp/bin/rpc
 sudo mv /usr/local/opt/rp/bin/rpd.sh /usr/local/opt/rp/bin/rpd
-echo Adding executable priviliges 
+echo Adding executable priviliges
 sudo chmod +x /usr/local/opt/rp/bin/rpsafe
 sudo chmod +x /usr/local/opt/rp/bin/rp
 sudo chmod +x /usr/local/opt/rp/bin/rpc

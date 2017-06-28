@@ -2,22 +2,15 @@
 A simple, secure random password generator for Mac designed to be secure and easy to use. This generator picks words from /usr/share/dict/words using data from /dev/random, a word dictionary that is comes preinstalled with macOS.
 
 # Install
-First download install.sh and run it by typing into terminal: 
-`sh install.sh`
+To start, install and run by typing the following command:
+`cd && curl -L https://git.io/vQnNE -o ~/install.sh && openssl dgst -SHA256 install.sh`
 
-Then, you can optionally calculate the checksum of the file by typing in
-`openssl dgst -SHA256 install.sh`
-The SHA256 (Secure Hash Algorithm) checksum should be `e492d9919c1ea069663f43df49902af405d6384092c2855031122203aeee7f1d`
-This ensures that the script hasn't been tampered with and it isn't corrupt. 
+If the output matches `d07bad69c104b9e3e18b6dd9d618508e43fdecf1e40a4e38910f3aea7ce48d5b`, then the SHA256 digest matches the most recent digest. If it does not match, redownload install.sh and try again. Checking the SHA256 digest ensures that the install file hasn't been tampered with and is not corrupted. This ensures security.
 
 The only requsite for this script is that you are using a relatively recent version of macOS (or OS X).
 
 # Usage
-
-To start, install by typing the following command:
-`cd && curl -L https://git.io/vQnNE -o ~/install.sh && sh install.sh`
-
-Then, choose one of the following options:
+To use Random-Password, type one of the following options into Terminal:
 
  - `rp` to generate a random word followed by however many random characters that you want
  - `rpc` to generate a random string of characters
