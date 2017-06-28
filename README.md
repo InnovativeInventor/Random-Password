@@ -7,6 +7,8 @@ To start, install and run by typing the following command:
 
 If the output matches `d07bad69c104b9e3e18b6dd9d618508e43fdecf1e40a4e38910f3aea7ce48d5b`, then the SHA256 digest matches the most recent digest. If it does not match, redownload install.sh and try again. Checking the SHA256 digest ensures that the install file hasn't been tampered with and is not corrupted. This ensures security.
 
+Next, type in `install.sh` to run the installer.
+
 The only requsite for this script is that you are using a relatively recent version of macOS (or OS X).
 
 # Usage
