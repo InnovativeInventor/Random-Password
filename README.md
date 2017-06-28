@@ -5,7 +5,7 @@ A simple, secure random password generator for Mac designed to be secure and eas
 To start, install and run by typing the following command:
 `cd && curl -L https://bit.ly/2skLK70 -o ~/install.sh && openssl dgst -SHA256 ~/install.sh`
 
-If the output matches `d07bad69c104b9e3e18b6dd9d618508e43fdecf1e40a4e38910f3aea7ce48d5b`, then the SHA256 digest matches the most recent digest. If it does not match, type in the command again. Checking the SHA256 digest ensures that the install file hasn't been tampered with and is not corrupted. This ensures security.
+If the output matches `19513d2eb40409454c046cbcd3bcbfc6d40821aa356b1f2dc7659c555ef3c005`, then the SHA256 digest matches the most recent digest. If it does not match, type in the command again. Checking the SHA256 digest ensures that the install file hasn't been tampered with and is not corrupted. This ensures security.
 
 Next, type in `sh ~/install.sh` to run the installer.
 
