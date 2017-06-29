@@ -5,6 +5,7 @@ echo Downloading
 sudo rm -r ~/Random-Password
 git clone https://github.com/InnovativeInventor/Random-Password
 sudo cp -r ~/Random-Password/bin /usr/local/opt/rp/
+sudo mv /usr/local/opt/rp/bin/safedict/safedict.txt /usr/local/opt/rp/bin/safedict.txt
 sudo mv /usr/local/opt/rp/bin/rpsafe.sh /usr/local/opt/rp/bin/rpsafe
 sudo mv /usr/local/opt/rp/bin/rp.sh /usr/local/opt/rp/bin/rp
 sudo mv /usr/local/opt/rp/bin/rpn.sh /usr/local/opt/rp/bin/rpn
