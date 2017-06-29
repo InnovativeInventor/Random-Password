@@ -34,7 +34,7 @@ until [ $COUNTER -lt 1 ]; do
     if ((totalif > 41196)); then
       echo "Uncommon error, self-correcting"
     else
-      word=`sed -n "$totalif p" safedict.txt`
+      word=`sed -n "$totalif p" /usr/local/opt/rp/bin/safedict.txt`
       randomsymbols=$(LC_ALL=C tr -dc '0-9!@#$%^&*()_+-=<>/?.' </dev/random | head -c $char)
       word=$(echo $word | sed 's/^0*//')
       randomsymbols=$(echo $randomsymbols | tr -d '\040\011\012\015')
@@ -50,7 +50,7 @@ until [ $COUNTER -lt 1 ]; do
     )
     finalnumberelse=$(echo $finishnumberelse | sed 's/^0*//')
     totalelse=$(( firstnumber*10000+finalnumberelse ))
-    word=`sed -n "$totalelse p" safedict.txt`
+    word=`sed -n "$totalelse p" /usr/local/opt/rp/bin/safedict.txt`
     randomsymbols=$(LC_ALL=C tr -dc '0-9!@#$%^&*()_+-=<>/?.' </dev/random | head -c $char)
     word=$(echo $word | sed 's/^0*//')
     randomsymbols=$(echo $randomsymbols | tr -d '\040\011\012\015')
