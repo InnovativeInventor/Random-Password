@@ -1,0 +1,3 @@
+[submodule "bin/safedict"]
+	path = bin/safedict
+	url = https://github.com/InnovativeInventor/12dict4schools
