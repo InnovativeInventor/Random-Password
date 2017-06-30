@@ -1,17 +1,17 @@
 #!/bin/bash
 echo Welcome to the random password assistor created by InnovativeInventor
 echo This is version 3
-echo "This now uses safelist.txt for a safe list of commonly used words. There are 41196 words in safelist"
+echo "This now uses safelist.txt for a safe list of commonly used words. There are 41196 words in safelist."
 echo
 echo Please type in the amount of random passwords that you need
 read number
 echo
 foo=$number
-echo Generating random stuff
+echo "Generating random stuff..."
 echo Please do some other things on this computer to generate entropy
-echo Your output will come out in a file named randomwords.txt in this directory
+echo "Your output will come out in a file named randomwords.txt in this directory."
 echo
-echo Type in the number of random characters that you want after your word
+echo "Type in the number of random characters that you want after your word:"
 read char
 echo
 
@@ -32,15 +32,18 @@ until [ $COUNTER -lt 1 ]; do
     finalnumberif=$(echo $finishnumberif | sed 's/^0*//')
     totalif=$(( firstnumber*10000+firstnumberif*1000+finalnumberif ))
     if ((totalif > 41196)); then
-      echo "Uncommon error, self-correcting"
+      echo "Uncommon error, self-correcting..."
     else
       word=`sed -n "$totalif p" /usr/local/opt/rp/bin/safedict.txt`
       randomsymbols=$(LC_ALL=C tr -dc '0-9!@#$%^&*()_+-=<>/?.' </dev/random | head -c $char)
       word=$(echo $word | sed 's/^0*//')
       randomsymbols=$(echo $randomsymbols | tr -d '\040\011\012\015')
-      printf "$word+$randomsymbols\n"
+      echo
+      echo $word$randomsymbols
+      echo
       echo $word
       echo $randomsymbols
+      echo $word$randomsymbols
       echo $word$randomsymbols >> randompassword.txt
       let COUNTER-=1
     fi
@@ -54,9 +57,12 @@ until [ $COUNTER -lt 1 ]; do
     randomsymbols=$(LC_ALL=C tr -dc '0-9!@#$%^&*()_+-=<>/?.' </dev/random | head -c $char)
     word=$(echo $word | sed 's/^0*//')
     randomsymbols=$(echo $randomsymbols | tr -d '\040\011\012\015')
-    printf "$word+$randomsymbols \n"
+    echo
+    echo $word$randomsymbols \n
+    echo
     echo $word
     echo $randomsymbols
+    echo $word$randomsymbols
     echo $word$randomsymbols >> randompassword.txt
     let COUNTER-=1
   fi
