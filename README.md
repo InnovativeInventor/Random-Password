@@ -22,7 +22,9 @@ To use Random-Password, type one of the following options into Terminal:
 
 1. Answer the prompts by typing the amount of passwords needed and the amount of random characters you want after each word. 
 2. Then, move your mouse around and do other actions on your computer to ensure that enough entropy is generated to prevent /dev/random from blocking. 
-3. Your output will come out in a file named randompassword.txt in the directory that you installed it in it should automatically open 
+3. Your output will automatically open
+
+Before running the command again, be sure to quite TextEdit
 
 You can view the progress of the generator by looking at the progress meter.
 
