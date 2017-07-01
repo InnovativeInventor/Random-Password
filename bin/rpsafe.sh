@@ -1,7 +1,10 @@
 #!/bin/bash
 echo Welcome to the random password assistor created by InnovativeInventor
 echo This is version 3
-echo "This now uses safelist.txt for a safe list of commonly used words. There are 41196 words in safelist."
+echo "This now uses safelist.txt for a safe list of commonly used words."
+sudo git submodule sync ~/Random-Password/bin
+sudo git submodule sync /usr/local/opt/Random-Password
+sudo cp /usr/local/opt/Random-Password/bin/12dict4schools/safedict.txt /usr/local/opt/Random-Password/bin/safedict.txt
 echo
 echo Please type in the amount of random passwords that you need
 read number
