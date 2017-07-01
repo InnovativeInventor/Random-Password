@@ -36,7 +36,7 @@ until [ $COUNTER -lt 1 ]; do
     )
     finalnumberif=$(echo $finishnumberif | sed 's/^0*//')
     totalif=$(( firstnumber*10000+firstnumberif*1000+finalnumberif ))
-    if ((totalif > 41196)); then
+    if ((totalif > 40990)); then
       echo "Uncommon error, self-correcting..."
     else
       word=`sed -n "$totalif p" /usr/local/opt/Random-Password/bin/safedict.txt`
