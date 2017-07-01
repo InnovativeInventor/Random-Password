@@ -44,8 +44,7 @@ until [ $COUNTER -lt 1 ]; do
       word=$(echo $word | sed 's/^0*//')
       randomsymbols=$(echo $randomsymbols | sed 's/[[:space:]]//g')
       word=$(echo $word | sed 's/[[:space:]]//g')
-      printf "$word$randomsymbols" >> randompassword.txt
-      echo >> randompassword.txt
+      echo "$word$randomsymbols" >> randompassword.txt
       let COUNTER-=1
     fi
   else
@@ -59,8 +58,7 @@ until [ $COUNTER -lt 1 ]; do
     word=$(echo $word | sed 's/^0*//')
     randomsymbols=$(echo $randomsymbols | sed 's/[[:space:]]//g')
     word=$(echo $word | sed 's/[[:space:]]//g')
-    printf "$word$randomsymbols" >> randompassword.txt
-    echo >> randompassword.txt
+    echo "$word$randomsymbols" >> randompassword.txt
     let COUNTER-=1
   fi
   progress=$((number-COUNTER))
