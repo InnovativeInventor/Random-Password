@@ -18,6 +18,12 @@ echo "Your output will come out in a file named randomwords.txt in this director
 echo
 echo "Type in the number of random characters that you want after your word:"
 read char
+
+# y/n option for leetspeak
+echo
+echo 'Type y/n if you want to use leetspeak. Check the readme to learn more.'
+read leetspeak
+
 echo
 
 COUNTER=$foo
@@ -44,6 +50,46 @@ until [ $COUNTER -lt 1 ]; do
       word=$(echo $word | sed 's/^0*//')
       randomsymbols=$(echo $randomsymbols | sed 's/[[:space:]]//g')
       word=$(echo $word | sed 's/[[:space:]]//g')
+      	if [ "$leetspeak" = y ]; then
+	          # Replace letter e randomly
+	          randome=$(
+	          LC_ALL=C tr -dc '0-2' </dev/random | head -c 1
+	          )
+	          if ((randome == 0)); then
+	            word=$(
+	            echo "$word" | sed 's/e/3/' | sed 's/E/3/'
+	            )
+	          fi
+
+	          # Replace letter o randomly
+	          randome=$(
+	          LC_ALL=C tr -dc '0-2' </dev/random | head -c 1
+	          )
+	          if ((randome == 0)); then
+	            word=$(
+	            echo "$word" | sed 's/o/0/' | sed 's/O/0/'
+	            )
+	          fi
+
+	          # Change letter a randomly
+	          randome=$(
+	          LC_ALL=C tr -dc '0-2' </dev/random | head -c 1
+	          )
+	          if ((randome == 0)); then
+	            word=$(
+	            echo "$word" | sed 's/t/T/'
+	            )
+	          fi
+			  if ((randome == 0)); then
+			  word=$(
+			  echo "$word" | sed 's/a/@/'
+			  )
+			  elif ((randome == 1)); then
+			  word=$(
+			  echo "$word" | sed 's/a/A/'
+			  )
+			  fi
+      	fi
       echo "$word$randomsymbols" >> randompassword.txt
       let COUNTER-=1
     fi
@@ -58,6 +104,50 @@ until [ $COUNTER -lt 1 ]; do
     word=$(echo $word | sed 's/^0*//')
     randomsymbols=$(echo $randomsymbols | sed 's/[[:space:]]//g')
     word=$(echo $word | sed 's/[[:space:]]//g')
+  	if [ "$leetspeak" = y ]; then
+	    # Replace letter e randomly
+	    randome=$(
+	    LC_ALL=C tr -dc '0-2' </dev/random | head -c 1
+	    )
+	    if ((randome == 0)); then
+	    word=$(
+	    echo "$word" | sed 's/e/3/' | sed 's/E/3/'
+	    )
+	    fi
+
+	    # Replace letter o randomly
+	    randome=$(
+	    LC_ALL=C tr -dc '0-2' </dev/random | head -c 1
+	    )
+	    if ((randome == 0)); then
+	    word=$(
+	    echo "$word" | sed 's/o/0/' | sed 's/O/0/'
+	    )
+	    fi
+
+	    # Capitalize letter t randomly
+	    randome=$(
+	    LC_ALL=C tr -dc '0-2' </dev/random | head -c 1
+	    )
+	    if ((randome == 0)); then
+	    word=$(
+	    echo "$word" | sed 's/t/T/'
+	    )
+	    fi
+	    # Change letter a randomly
+	    randome=$(
+	    LC_ALL=C tr -dc '0-2' </dev/random | head -c 1
+	    )
+	    if ((randome == 0)); then
+	    word=$(
+	    echo "$word" | sed 's/a/@/'
+	    )
+		elif ((randome == 1)); then
+		word=$(
+	    echo "$word" | sed 's/a/A/'
+	    )
+	    fi
+    fi
     echo "$word$randomsymbols" >> randompassword.txt
     let COUNTER-=1
   fi
