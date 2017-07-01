@@ -12,7 +12,7 @@ sudo sh ~/Random-Password/uninstall.sh >> /dev/null
 git clone https://github.com/InnovativeInventor/Random-Password --recursive >> /dev/null
 
 # Copying over to the directory created
-sudo cp -r ~/Random-Password /usr/local/opt/Random-Password/
+sudo cp -r ~/Random-Password /usr/local/opt/
 
 # Moving safedict over to be together with all the scripts
 sudo cp /usr/local/opt/Random-Password/bin/12dict4schools/safedict.txt /usr/local/opt/Random-Password/bin/safedict.txt
