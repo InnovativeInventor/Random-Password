@@ -53,7 +53,7 @@ until [ $COUNTER -lt 1 ]; do
       	if [ "$leetspeak" = y ]; then
 	          # Replace letter e randomly
 	          randome=$(
-	          LC_ALL=C tr -dc '0-2' </dev/random | head -c 1
+	          LC_ALL=C tr -dc '0-2' </dev/urandom | head -c 1
 	          )
 	          if ((randome == 0)); then
 	            word=$(
@@ -63,7 +63,7 @@ until [ $COUNTER -lt 1 ]; do
 
 	          # Replace letter o randomly
 	          randome=$(
-	          LC_ALL=C tr -dc '0-2' </dev/random | head -c 1
+	          LC_ALL=C tr -dc '0-2' </dev/urandom | head -c 1
 	          )
 	          if ((randome == 0)); then
 	            word=$(
@@ -71,15 +71,20 @@ until [ $COUNTER -lt 1 ]; do
 	            )
 	          fi
 
-	          # Change letter a randomly
+	          # Capitalize letter t randomly
 	          randome=$(
-	          LC_ALL=C tr -dc '0-2' </dev/random | head -c 1
+	          LC_ALL=C tr -dc '0-2' </dev/urandom | head -c 1
 	          )
 	          if ((randome == 0)); then
 	            word=$(
 	            echo "$word" | sed 's/t/T/'
 	            )
 	          fi
+
+	          # Change letter a randomly
+	          randome=$(
+	          LC_ALL=C tr -dc '0-2' </dev/urandom | head -c 1
+	          )
 			  if ((randome == 0)); then
 			  word=$(
 			  echo "$word" | sed 's/a/@/'
@@ -107,7 +112,7 @@ until [ $COUNTER -lt 1 ]; do
   	if [ "$leetspeak" = y ]; then
 	    # Replace letter e randomly
 	    randome=$(
-	    LC_ALL=C tr -dc '0-2' </dev/random | head -c 1
+	    LC_ALL=C tr -dc '0-2' </dev/urandom | head -c 1
 	    )
 	    if ((randome == 0)); then
 	    word=$(
@@ -117,7 +122,7 @@ until [ $COUNTER -lt 1 ]; do
 
 	    # Replace letter o randomly
 	    randome=$(
-	    LC_ALL=C tr -dc '0-2' </dev/random | head -c 1
+	    LC_ALL=C tr -dc '0-2' </dev/urandom | head -c 1
 	    )
 	    if ((randome == 0)); then
 	    word=$(
@@ -127,7 +132,7 @@ until [ $COUNTER -lt 1 ]; do
 
 	    # Capitalize letter t randomly
 	    randome=$(
-	    LC_ALL=C tr -dc '0-2' </dev/random | head -c 1
+	    LC_ALL=C tr -dc '0-2' </dev/urandom | head -c 1
 	    )
 	    if ((randome == 0)); then
 	    word=$(
@@ -136,7 +141,7 @@ until [ $COUNTER -lt 1 ]; do
 	    fi
 	    # Change letter a randomly
 	    randome=$(
-	    LC_ALL=C tr -dc '0-2' </dev/random | head -c 1
+	    LC_ALL=C tr -dc '0-2' </dev/urandom | head -c 1
 	    )
 	    if ((randome == 0)); then
 	    word=$(
