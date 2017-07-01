@@ -3,8 +3,8 @@ echo Welcome to the random password assistor created by InnovativeInventor
 echo This is version 3
 echo "This now uses safelist.txt for a safe list of commonly used words."
 echo "Fetching newest copy of dictionary list"
-cd ~/Random-Password && sudo git submodule sync
-cd /usr/local/opt/Random-Password && sudo git submodule sync 
+cd ~/Random-Password && git submodule sync
+cd /usr/local/opt/Random-Password && git submodule sync 
 cd
 sudo cp /usr/local/opt/Random-Password/bin/12dict4schools/safedict.txt /usr/local/opt/Random-Password/bin/safedict.txt
 echo
