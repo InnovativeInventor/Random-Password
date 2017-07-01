@@ -18,9 +18,7 @@ To use Random-Password, type one of the following options into Terminal:
  - `rpc` to generate a random string of characters
  - `rpn` to generate a random string of numbers
  - `rpd` to delete your randompassword.txt file
- - `rpsafe` to generate a random, school appropriate word followed by however many characters that you want.
-
- Note: `rpsafe` is currently not working, please use it only when this message is removed.
+ - `rpsafe` to generate a random, school appropriate, and commonly used words followed by however many characters that you want
 
 1. Answer the prompts by typing the amount of passwords needed and the amount of random characters you want after each word. 
 2. Then, move your mouse around and do other actions on your computer to ensure that enough entropy is generated to prevent /dev/random from blocking. 

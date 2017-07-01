@@ -37,14 +37,10 @@ until [ $COUNTER -lt 1 ]; do
       word=`sed -n "$totalif p" /usr/local/opt/rp/bin/safedict.txt`
       randomsymbols=$(LC_ALL=C tr -dc '0-9!@#$%^&*()_+-=<>/?.' </dev/random | head -c $char)
       word=$(echo $word | sed 's/^0*//')
-      randomsymbols=$(echo $randomsymbols | tr -d '\040\011\012\015')
-      echo
-      echo $word$randomsymbols
-      echo
-      echo $word
-      echo $randomsymbols
-      echo $word$randomsymbols
-      echo $word$randomsymbols >> randompassword.txt
+      randomsymbols=$(echo $randomsymbols | sed 's/[[:space:]]//g')
+      word=$(echo $word | sed 's/[[:space:]]//g')
+      printf "$word$randomsymbols" >> randompassword.txt
+      echo >> randompassword.txt
       let COUNTER-=1
     fi
   else
@@ -56,14 +52,10 @@ until [ $COUNTER -lt 1 ]; do
     word=`sed -n "$totalelse p" /usr/local/opt/rp/bin/safedict.txt`
     randomsymbols=$(LC_ALL=C tr -dc '0-9!@#$%^&*()_+-=<>/?.' </dev/random | head -c $char)
     word=$(echo $word | sed 's/^0*//')
-    randomsymbols=$(echo $randomsymbols | tr -d '\040\011\012\015')
-    echo
-    echo $word$randomsymbols \n
-    echo
-    echo $word
-    echo $randomsymbols
-    echo $word$randomsymbols
-    echo $word$randomsymbols >> randompassword.txt
+    randomsymbols=$(echo $randomsymbols | sed 's/[[:space:]]//g')
+    word=$(echo $word | sed 's/[[:space:]]//g')
+    printf "$word$randomsymbols" >> randompassword.txt
+    echo >> randompassword.txt
     let COUNTER-=1
   fi
   progress=$((number-COUNTER))
