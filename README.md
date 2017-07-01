@@ -26,6 +26,9 @@ To use Random-Password, type one of the following options into Terminal:
 
 You can view the progress of the generator by looking at the progress meter.
 
+# Update
+To update, simply run through the installation process again.
+
 # Contributions
 Feel free to contribute and add more features!
 

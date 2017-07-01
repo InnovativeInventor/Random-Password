@@ -1,3 +1,6 @@
 [submodule "bin/safedict"]
 	path = bin/safedict
 	url = https://github.com/InnovativeInventor/12dict4schools
+[submodule "bin/12dict4schools"]
+	path = bin/12dict4schools
+	url = https://github.com/InnovativeInventor/12dict4schools
