@@ -6,10 +6,10 @@ sudo mkdir /usr/local/opt/Random-Password
 echo Uninstalling previous versions and downloading
 
 # Deleting previous installs of Random-Password
-sudo sh ~/Random-Password/uninstall.sh > /dev/null
+sudo sh ~/Random-Password/uninstall.sh >> /dev/null
 
 # Recursively cloning from Github
-git clone https://github.com/InnovativeInventor/Random-Password --recursive > /dev/null
+git clone https://github.com/InnovativeInventor/Random-Password --recursive >> /dev/null
 
 # Copying over to the directory created
 sudo cp -r ~/Random-Password /usr/local/opt/Random-Password/
