@@ -29,7 +29,7 @@ Before running the command again, be sure to quite TextEdit
 You can view the progress of the generator by looking at the progress meter.
 
 # Update
-To update, simply run through the installation process again. `install.sh` should run through the uninstall process if there is a copy of Random-Password on your Mac.
+To update, simply run through the installation process again. If you already have Random-Password installed on your mac, install.sh will first uninstall, then run through the installation progress again.
 
 # 12dict4schools
 Safelist.txt was created using Alan Beale's 12 dict project and is intended for school use and other applications that require a dictionary with safe, non-controversial words. You can contribute to 12dict4schools at https://github.com/InnovativeInventor/12dict4schools
