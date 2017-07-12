@@ -1,11 +1,12 @@
 #!/bin/bash
 echo Installing
+
 # Making directory on computer to move files to
 sudo mkdir /usr/local/opt/Random-Password
 
 echo Uninstalling previous versions and downloading
 
-# Deleting previous installs of Random-Password
+# Deleting previous installs of Random-Password and silencing the output
 sudo sh ~/Random-Password/uninstall.sh >> /dev/null
 
 # Recursively cloning from Github
